@@ -1,6 +1,20 @@
+/* global */
+:root {
+  /* color */
+  /* font-size */
+  --font-large: 48px;
+  --
 
+  /* font-weight */
+  /* border-radius */
+  /* animation */
+}
 
-.navbar__logo .fa-joomla {
-  font-size: 2rem;
-  color: red;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'open sans', sans-serif;
+  margin: 0;
 }
