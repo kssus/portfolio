@@ -86,6 +86,8 @@ p {
   align-items: center;
   background-color: var(--color-fandango);
   color: var(--color-white);
+  position: fixed;
+  width: 100%;
 }
 
 .navbar__logo {
@@ -105,4 +107,13 @@ p {
   display: flex;
   justify-content: space-around;
   width: 60%;
+}
+
+/* home */
+.home__avatar {
+  text-align: center;
+  border-radius: 50%;
+  margin-top: 140px;
+  width: 320px;
+  height: 320px;
 }
