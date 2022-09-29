@@ -96,18 +96,20 @@ p {
 }
 
 .navbar__logo .fa-joomla {
-  font-size: 22px;
+  font-size: 30px;
+  vertical-align: middle;
 }
 
 .navbar__title {
   margin-left: 10px;
   color: var(--color-white);
+  vertical-align: middle;  
 }
 
 .navbar__menu {
   display: flex;
   justify-content: space-around;
-  width: 60%;
+  width: 70%;
 }
 
 /* section */
@@ -125,6 +127,7 @@ p {
 /* home */
 #home {
   background: url(img/cover.png) center/cover no-repeat;
+  color: var(--color-white);
 }
 
 .home__avatar {
@@ -132,4 +135,12 @@ p {
   margin-top: 140px;
   width: 300px;
   height: 300px;
+}
+
+.home__contact {
+  width: 220px;
+  height: 70px;
+  margin-top: 30px;
+  border-radius: 4px;
+  border-color: transparent;
 }
