@@ -223,7 +223,8 @@ p {
 
 .skillset {
   display: flex;
-  margin: 60px;
+  background: var(--color-grey);
+  margin: 20px;
   color: var(--color-white);
 }
 
@@ -231,7 +232,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-basis: 50%;
+  flex-basis: 60%;
   background: var(--color-dim-grey);
 }
 
@@ -251,24 +252,31 @@ p {
 .skill__bar {
   display: flex;
   width: 100%;
-  height: 6px;
+  height: 3px;
   background: var(--color-grey);
   border-radius: var(border-radius-size);
   margin-bottom: 40px;
 }
 
+.skill__value {
+  height: 3px;
+  background: var(--color-orange);
+}
+
 .skillset__right {
-  flex-basis: 50%;
+  flex-basis: 40%;
   flex-direction: column;
 }
 
 .skillset__title {
   font-weight: var(--weight-semi-bold);
-  margin-bottom: 40px;
 }
 
 .tools,
 .etc {
-  padding-left: 0;
+  padding: 35px;
 }
 
+.tools {
+  background: var(--color-shade-grey);
+}
