@@ -99,6 +99,7 @@ p {
   position: fixed;
   width: 100%;
   height: 90px;
+  z-index: 1;
 }
 
 .navbar__logo {
@@ -283,13 +284,13 @@ p {
 
 /* my work */
 .work__categories {
-  margin: 28px 0;
+  margin: 40px 0;
 
 }
 
 .category__btn {
   border: 1px solid var(--color-black);
-  padding: 10px 35px;
+  padding: 10px 44px;
   border-radius: var(--border-radius-size);
 }
 
@@ -299,8 +300,76 @@ p {
   height: 17px;
   line-height: 17px;
   border-radius: 50%;
+  color: var(--color-white);
   background: var(--color-orange);
   position: relative;
   top: -30px;
   opacity: 0;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background: var(--color-purple);
+  color: var(--color-white);
+}
+
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-light-grey);
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  position: relative;
+}
+
+.project__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transition: all var(--animation-duration) ease-in;
+  width: 100%;
+  height: 100%;
+  background: var(--color-black);
+  opacity: 0;
+}
+
+.project__description:hover {
+  opacity: 0.8;
+  top: 0;
+}
+
+.project__description h3:after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 4px;
+  position: relative;
+  top: 5px;
+  left: 50%;
+  background: var(--color-orange);
+  transform: translateX(-50%);
+}
+
+.project img {
+  max-width: 100%;
+  max-height: 100%;
 }
