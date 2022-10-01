@@ -186,8 +186,12 @@ p {
 .major__icon .fa-mobile:hover,
 .major__icon .fa-server:hover,
 .major__icon .fa-html5:hover {
-  transform: rotate(30deg);  
+  transform: rotate(30deg) scale(1.1);  
   color: var(--color-orange);
+}
+
+.about__job {
+  margin-bottom: 40px;
 }
 
 .major__title {
@@ -211,3 +215,60 @@ p {
 .job__period {
   font-size: var(--font-micro);
 }
+
+/* skills */
+#skills {
+  background: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  margin: 60px;
+  color: var(--color-white);
+}
+
+.skillset__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 50%;
+  background: var(--color-dim-grey);
+}
+
+.skills {
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+
+.skill__bar {
+  display: flex;
+  width: 100%;
+  height: 6px;
+  background: var(--color-grey);
+  border-radius: var(border-radius-size);
+  margin-bottom: 40px;
+}
+
+.skillset__right {
+  flex-basis: 50%;
+  flex-direction: column;
+}
+
+.skillset__title {
+  font-weight: var(--weight-semi-bold);
+  margin-bottom: 40px;
+}
+
+.tools,
+.etc {
+  padding-left: 0;
+}
+
