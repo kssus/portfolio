@@ -103,7 +103,7 @@ p {
 }
 
 .navbar__logo {
-  margin-left: 90px;
+  margin-left: 120px;
 }
 
 .navbar__logo .fa-joomla {
@@ -120,7 +120,14 @@ p {
 .navbar__menu {
   display: flex;
   justify-content: space-around;
-  width: 70%;
+  width: 1100px;
+}
+
+.navbar__toggle-btn {
+  position: absolute;
+  right: 50px;
+  font-size: 1.5em;
+  display: none;
 }
 
 
@@ -154,7 +161,7 @@ p {
 }
 
 .section__container {
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -450,4 +457,28 @@ p {
 
 .contact__rights {
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 16px;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__logo {
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+ .navbar__toggle-btn {
+    display: block;
+  }
 }
