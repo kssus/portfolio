@@ -424,3 +424,30 @@ p {
 .name a {
   color: var(--color-fandango);
 }
+
+/* contact */
+#contact {
+  background: var(--color-purple);
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin-top: 50px;
+}
+
+.contact__email {
+  font-size: var(--font-medium);
+}
+
+.contact__link {
+  margin: 40px 0;
+  font-size: 3.5em;
+}
+
+.contact__link a {
+  margin: 0 5px;
+}
+
+.contact__rights {
+  margin-bottom: 40px;
+}
