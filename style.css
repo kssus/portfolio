@@ -59,6 +59,10 @@ button {
   background: transparent;
 }
 
+ul {
+  padding: 0;
+}
+
 li {
   list-style: none;
 }
@@ -89,7 +93,6 @@ p {
 }
 
 /* navbar */
-
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -98,23 +101,23 @@ p {
   color: var(--color-white);
   position: fixed;
   width: 100%;
-  height: 90px;
   z-index: 1;
 }
 
 .navbar__logo {
+  display: flex;
   margin-left: 120px;
 }
 
 .navbar__logo .fa-joomla {
-  font-size: 30px;
-  vertical-align: middle;
+  color: var(--color-orange);
+  font-size: var(--font-medium);
+  margin-right: 10px;
 }
 
 .navbar__title {
-  margin-left: 10px;
   color: var(--color-white);
-  vertical-align: middle;  
+  align-self: center;
 }
 
 .navbar__menu {
@@ -128,6 +131,11 @@ p {
   right: 50px;
   font-size: 1.5em;
   display: none;
+}
+
+.navbar__menu-item {
+  cursor: pointer;
+  padding: 6px 15px;
 }
 
 
@@ -459,6 +467,7 @@ p {
   margin-bottom: 40px;
 }
 
+/* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .section {
     padding: 16px;
@@ -469,16 +478,17 @@ p {
     align-items: flex-start;
   }
 
-  .navbar__logo {
-  }
-
   .navbar__menu {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    display: none;
   }
+
+
 
  .navbar__toggle-btn {
     display: block;
+    color: var(--color-white);
   }
 }
