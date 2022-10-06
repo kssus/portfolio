@@ -503,4 +503,43 @@ p {
     display: block;
     color: var(--color-white);
   }
+
+  .home__avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about__majors {
+    flex-direction: column;
+    margin: 40px 0 20px;
+  }
+
+  .major {
+    margin-bottom: 40px;
+  }
+
+  .major__icon {
+    margin-bottom: 20px;
+  }
+
+  .skillset {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .work__categories {
+    flex-direction: column;
+    /* text-align: center; */
+    padding: 0 40px;
+  }
+  
+  .category__btn {
+    margin-bottom: 8px;
+    width: 100%;
+    font-size: var(--font-regular);
+  }
+
+  .work__projects {
+    margin-bottom: 30px;
+  }
 }
