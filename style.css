@@ -555,6 +555,11 @@ p {
     border-radius: var(--border-radius-size);
   }
 
+  .testimonial__avatar {
+    width: 80px;
+    height: 80px;
+  }
+
   .testimonial__avatar:nth-child(odd) {
     margin: 0 0 10px;
   }
