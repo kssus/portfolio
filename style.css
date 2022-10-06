@@ -477,11 +477,9 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    overflow-x: hidden;
-    right: 0;
+    /* right: 0;
     left: 0;
-    width: 375.2px;
-
+    width: 375.2px; */
   }
 
   .navbar__logo {
@@ -541,5 +539,26 @@ p {
 
   .work__projects {
     margin-bottom: 30px;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
+
+  .testimonial {
+    flex-direction: column;
+  }
+
+  .testimonial__speechBubble {
+    order: 1;
+    margin: 0 50px;
+    border-radius: var(--border-radius-size);
+  }
+
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0 0 10px;
+  }
+  .testimonial__avatar:nth-child(even) {
+    margin: 0 0 10px;
   }
 }
