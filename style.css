@@ -129,7 +129,7 @@ p {
 
 .navbar__toggle-btn {
   position: absolute;
-  right: 50px;
+  right: 20px;
   font-size: 1.5em;
   display: none;
 }
@@ -482,6 +482,10 @@ p {
     left: 0;
     width: 375.2px;
 
+  }
+
+  .navbar__logo {
+    margin-left: 10px;
   }
 
   .navbar__menu {
