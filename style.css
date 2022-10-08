@@ -98,11 +98,16 @@ p {
   padding: 12px;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-dark-blue);
+  background-color: transparent;
   color: var(--color-white);
   position: fixed;
   width: 100%;
   z-index: 1;
+  transition: all var(--animation-duration) ease-in;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-dark-blue);
 }
 
 .navbar__logo {
@@ -114,6 +119,7 @@ p {
   color: var(--color-orange);
   font-size: var(--font-medium);
   margin-right: 10px;
+  align-self: center;
 }
 
 .navbar__title {
