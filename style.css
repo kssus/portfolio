@@ -57,6 +57,7 @@ button {
   border: none;
   outline: none;
   background: transparent;
+  color: var(--color-white);
 }
 
 ul {
@@ -154,6 +155,10 @@ p {
 #home {
   background: url(img/cover.png) center/cover no-repeat;
   color: var(--color-white);
+}
+
+#home .section__container {
+  opacity: 1;
 }
 
 .home__avatar {
