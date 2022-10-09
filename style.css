@@ -57,7 +57,6 @@ button {
   border: none;
   outline: none;
   background: transparent;
-  color: var(--color-white);
 }
 
 ul {
@@ -175,6 +174,7 @@ p {
   margin-top: 30px;
   border-radius: var(--border-radius-size);
   border: 2px solid var(--color-white);
+  color: var(--color-white);
 }
 
 /* section common */
@@ -316,10 +316,10 @@ p {
 /* my work */
 .work__categories {
   margin: 40px 0;
-
 }
 
 .category__btn {
+  font-size: var(--font-regular);
   border: 1px solid var(--color-black);
   padding: 10px 44px;
   border-radius: var(--border-radius-size);

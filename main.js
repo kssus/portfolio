@@ -50,4 +50,35 @@ document.addEventListener('scroll', () => {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: "smooth"});
   };
+
+  // project filtering & animation
+  const workCategories = document.querySelector('.work__categories');
+  const projectContainer = document.querySelector('.work__projects');
+  const project = document.querySelector('.project');
+
+  workCategories.addEventListener('click', (e) => {
+    // console.log(e.target.dataset.filter);
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    console.log(filter);
+    
+    // if(filter == null) {
+    //   return;
+    // } else {
+    //   projects.foreach((project) => {
+    //     console.log(project);
+    //   })
+    //   console.log('---------------');
+      
+    //   for(let project of projects) {
+    //     console.log(project);
+    //   }
+    //   console.log('---------------');
+      
+    //   let project;
+    //   for(i = 0; i < projects.length; i++) {
+    //     project = projects[i]
+    //     console.log(project);
+    //   }      
+    // }
+  })
   
