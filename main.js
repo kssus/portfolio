@@ -54,31 +54,31 @@ document.addEventListener('scroll', () => {
   // project filtering & animation
   const workCategories = document.querySelector('.work__categories');
   const projectContainer = document.querySelector('.work__projects');
-  const project = document.querySelector('.project');
+  const projects = document.querySelectorAll('.project');
 
   workCategories.addEventListener('click', (e) => {
+
     // console.log(e.target.dataset.filter);
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-    console.log(filter);
-    
-    // if(filter == null) {
-    //   return;
-    // } else {
-    //   projects.foreach((project) => {
-    //     console.log(project);
-    //   })
-    //   console.log('---------------');
-      
-    //   for(let project of projects) {
-    //     console.log(project);
-    //   }
-    //   console.log('---------------');
-      
-    //   let project;
-    //   for(i = 0; i < projects.length; i++) {
-    //     project = projects[i]
-    //     console.log(project);
-    //   }      
-    // }
-  })
+    if(filter == null) {
+      return;
+    } 
+      // console.log(filter);
+      const target = e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+      const selected = document.querySelector('.category__btn.active');
+      selected.classList.remove('active');
+      target.classList.add('active');
+      projectContainer.classList.add('anim-out');
+      setTimeout(() => {
+        projectContainer.classList.remove('anim-out');
+        projects.forEach((project) => {
+          // console.log(project.dataset.type);
+          if(filter === '*' || filter === project.dataset.type) {
+            project.classList.remove('invisible');
+          } else {
+            project.classList.add('invisible');
+          }
+      });
+      }, 300); 
+  });
   

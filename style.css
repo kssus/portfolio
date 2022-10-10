@@ -327,9 +327,9 @@ p {
 
 .category__count {
   display: inline-block;
-  width: 17px;
-  height: 17px;
-  line-height: 17px;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
   border-radius: 50%;
   color: var(--color-white);
   background: var(--color-orange);
@@ -355,6 +355,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transition: all 2s ease-out;
+  opacity: 1;
+}
+
+.work__projects.anim-out {
+ opacity: 1;
+ transform: scale(0.9) translateY(50px);
 }
 
 .project {
@@ -366,6 +373,10 @@ p {
   height: 250px;
   margin: 2px;
   position: relative;
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__description {
