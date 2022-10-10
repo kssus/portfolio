@@ -494,6 +494,26 @@ p {
   margin-bottom: 40px;
 }
 
+.arrow-up {
+  font-size: 24px;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  background-color: var(--color-orange);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity var(--animation-duration) ease-in-out;
+}
+
+.arrow-up.invisible {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .section {
