@@ -467,16 +467,14 @@ p {
   color: var(--color-fandango);
 }
 
-/* Appendix */
-.device__explaination {
+/* Device */
+.device__container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 100px 0;
 }
 
 .device {
-  flex-basis: 30%;
-  padding: 0 30px;
+  flex-basis: 40%;
 }
 
 .device h3 {
@@ -484,12 +482,42 @@ p {
   margin-bottom: 20px;
 }
 
-.device__img {
-  flex-basis: 60%;
+.device p {
+  text-align: left;
 }
 
-.device__img .phone {
-  transform: translateX(-(300px));
+.device__img {
+  flex-basis: 60%;
+  position: relative;
+}
+
+.device__img img {
+  padding: 10px;
+  position: absolute;
+  left: 20px;  
+}
+
+
+#phone {
+  top: 68px;
+}
+
+/* Features */
+#features {
+  background-color: var(--color-light-grey);
+}
+
+.features {
+  width: 900px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features h4 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-regular);
+  margin: 10px 0;
 }
 
 /* contact */
