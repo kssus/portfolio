@@ -475,6 +475,7 @@ p {
 
 .device {
   flex-basis: 40%;
+  margin-left: 40px;
 }
 
 .device h3 {
@@ -494,13 +495,33 @@ p {
 .device__img img {
   padding: 10px;
   position: absolute;
-  left: 20px;  
+  left: 20px;
+  opacity: 0;  
 }
-
 
 #phone {
   top: 68px;
 }
+
+#monitor.animate {
+  transform: translateX(350px);
+}
+
+#phone.animate {
+  transform: translateX(545px);
+}
+
+.animate {
+  transition: all 3s ease-in-out;
+  animation: 2s forwards fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  5% {opacity: 1;}
+  100% {opacity: 1;}
+}
+
 
 /* Features */
 #features {

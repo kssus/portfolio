@@ -106,5 +106,23 @@ setTimeout(() => {
 
   // };
 
+// Device
+document.addEventListener('scroll', () => {
+  const monitor = document.querySelector('#monitor');
+  console.log(window.scrollY);
+  if(window.scrollY > 3900) {
+    monitor.classList.add('animate');
+  } else {
+    monitor.classList.remove('animate');
+  }
+  
+  const phone = document.querySelector('#phone');
+  console.log(window.scrollY);
+  if(window.scrollY > 3900) {
+    phone.classList.add('animate');
+  } else {
+    phone.classList.remove('animate');
+  }
+})
 
   
