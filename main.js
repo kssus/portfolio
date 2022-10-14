@@ -110,7 +110,7 @@ setTimeout(() => {
 document.addEventListener('scroll', () => {
   const monitor = document.querySelector('#monitor');
   console.log(window.scrollY);
-  if(window.scrollY > 3900) {
+  if(window.scrollY > 3800) {
     monitor.classList.add('animate');
   } else {
     monitor.classList.remove('animate');
@@ -118,11 +118,23 @@ document.addEventListener('scroll', () => {
   
   const phone = document.querySelector('#phone');
   console.log(window.scrollY);
-  if(window.scrollY > 3900) {
+  if(window.scrollY > 3800) {
     phone.classList.add('animate');
   } else {
     phone.classList.remove('animate');
   }
-})
+});
 
-  
+// Features
+const featureContainer = document.querySelectorAll('.feature');
+
+featureContainer.forEach((feature) => {
+  // console.log(feature);
+  document.addEventListener('scroll', () => {
+    if(window.scrollY > 4110) {
+      feature.classList.add('animate');
+    } else {
+      feature.classList.remove('animate');
+    }
+  });
+});

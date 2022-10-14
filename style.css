@@ -535,6 +535,14 @@ p {
   justify-content: space-between;
 }
 
+.feature {
+  transform: scale(5%);
+}
+
+.feature.animate {
+  transform: scale(100%);
+}
+
 .features h4 {
   font-size: var(--font-medium);
   font-weight: var(--weight-regular);
