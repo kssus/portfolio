@@ -516,6 +516,88 @@ p {
   animation: 2s forwards fadeIn;
 }
 
+/* Location */
+#location.section {
+  padding: 0;
+  position: relative;
+}
+
+.stripes {
+  display: flex;
+  height: 520px;
+}
+
+.stripe {
+  width: 10%;
+}
+
+#s1 {
+  background: #2c2f36;
+}
+
+#s2 {
+  background: #444850;
+}
+
+#s3 {
+  background: #36383c;
+}
+
+#s4 {
+  background: #1e2026;
+}
+
+#s5 {
+  background: #444850;
+}
+
+#s6 {
+  background: #2b2d30;
+}
+
+#s7 {
+  background: #212326;
+}
+
+#s8 {
+  background: #36383c;
+}
+
+#s9 {
+  background: #444850;
+}
+
+#s10 {
+  background: #2c2f36;
+}
+
+#location .section__container {
+  display: flex;
+  position: absolute;
+  top: 0; left: 0;
+  margin: 0 auto;
+}
+
+.location {
+  flex-basis: 50%;
+  position: relative;
+}
+
+.map {
+  z-index: 1;
+}
+
+.map, .radar {
+  position: absolute;
+}
+
+.explanation {
+  flex-basis: 50%;
+  color: var(--color-white);
+}
+
+
+
 @keyframes fadeIn {
   0% {opacity: 0;}
   5% {opacity: 1;}
