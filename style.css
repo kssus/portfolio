@@ -512,9 +512,35 @@ p {
 }
 
 .animate {
-  transition: all 3s ease-in-out;
+  transition: all 2s ease-in-out;
   animation: 2s forwards fadeIn;
 }
+
+/* Features */
+@keyframes imgGrow {
+  from {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 169px;
+    height: 169px;
+  }
+}
+
+.feature.img__grow img {
+  transition: all 2s ease-in-out;
+  animation: 2s forwards imgGrow;
+}
+/* .feature {
+  width: 0;
+  height: 0;
+}
+
+.feature.img__grow img {
+  width: 169px;
+  height: 169px;
+} */
 
 /* Location */
 #location.section {
@@ -574,21 +600,31 @@ p {
 #location .section__container {
   display: flex;
   position: absolute;
-  top: 0; left: 0;
-  margin: 0 auto;
+  top: 0; 
+  left: 0;
+  right: 0;
+  /* margin: 0 auto; */
 }
 
 .location {
   flex-basis: 50%;
-  position: relative;
 }
 
 .map {
-  z-index: 1;
+  position: relative;
 }
 
-.map, .radar {
+.location-radar {
+  /* display: inline-block; */
   position: absolute;
+  /* top: 50%; */
+  /* transform: translateY(50%) */
+  /* z-index: 1; */
+}
+
+.location-map {
+  /* position:absolute; */
+  /* margin-top: 50%; */
 }
 
 .explanation {

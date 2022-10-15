@@ -109,16 +109,15 @@ setTimeout(() => {
 // Device
 document.addEventListener('scroll', () => {
   const monitor = document.querySelector('#monitor');
-  console.log(window.scrollY);
-  if(window.scrollY > 3800) {
+  if(window.scrollY > 3690) {
     monitor.classList.add('animate');
   } else {
     monitor.classList.remove('animate');
   }
   
   const phone = document.querySelector('#phone');
-  console.log(window.scrollY);
-  if(window.scrollY > 3800) {
+  // console.log(window.scrollY);
+  if(window.scrollY > 3690) {
     phone.classList.add('animate');
   } else {
     phone.classList.remove('animate');
@@ -127,14 +126,13 @@ document.addEventListener('scroll', () => {
 
 // Features
 const featureContainer = document.querySelectorAll('.feature');
-
 featureContainer.forEach((feature) => {
-  // console.log(feature);
+  console.log(feature);
   document.addEventListener('scroll', () => {
-    if(window.scrollY > 4110) {
-      feature.classList.add('animate');
+    if(window.scrollY > 3930) {
+      feature.classList.add('img__grow');
     } else {
-      feature.classList.remove('animate');
+      feature.classList.remove('img__grow');
     }
   });
 });
