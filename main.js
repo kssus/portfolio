@@ -23,7 +23,7 @@ navbarMenu.addEventListener('click', (e) => {
   const link = target.dataset.link;
   // console.log(link);
   scrollIntoView(link);
-})
+});
 // scrolling to pade home
 const home = document.querySelector('#home');
 const homeContainer = document.querySelector('#home .section__container');
@@ -32,7 +32,7 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
 
   homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
-})
+});
 
 // arrow up to home
 const arrowUp = document.querySelector('.arrow-up');
@@ -43,17 +43,17 @@ document.addEventListener('scroll', () => {
   } else {
     arrowUp.classList.add('invisible');
   }
-})
+});
 
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
-})
+});
 
 // click "contact me" button
 const homeBtn = document.querySelector('.home__contact');
 homeBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
-})
+});
 
 // utility funtion
 function scrollIntoView(selector) {
@@ -109,9 +109,8 @@ setTimeout(() => {
   const device__container = document.querySelector('#device');
   const deviceTop = device__container.offsetTop;
   const offset = 600;
-  const deviceOST = deviceTop - offset;
-  
-  console.log(`deviceOST: ${deviceOST}`);
+  const deviceOST = deviceTop - offset;  
+  // console.log(`deviceOST: ${deviceOST}`);
 
   document.addEventListener('scroll', () => {
     const active = document.querySelectorAll('.device__item');
@@ -122,14 +121,14 @@ setTimeout(() => {
       // else {
       //   device__item.classList.remove('animate');
       // };
-    })
+    });
   });
 
 // Features animation
 const features__container = document.querySelector('#features');
 const featuresTop = features__container.offsetTop;
 const featuresOST = featuresTop - offset;
-console.log(`featuresTop: ${featuresTop}`);
+// console.log(`featuresTop: ${featuresTop}`);
 
 
 function imgGrow(target) {
@@ -151,5 +150,21 @@ document.addEventListener('scroll', () => {
 
 document.addEventListener('scroll', () => {
   imgGrow('.feature__name')
-})
+});
 
+// Location
+const stripes__container = document.querySelector('#location');
+const stripesTop = stripes__container.offsetTop;
+const stripesOST = stripesTop - offset;
+  // console.log(`stripesTop: ${stripesTop}`);
+document.addEventListener('scroll', () => {
+  const stripes = document.querySelectorAll('.stripe');
+  stripes.forEach((stripe, index) => {
+    // console.log(index);
+    if(window.scrollY > stripesOST) {
+      setTimeout(() => {
+        stripe.classList.add('stripeGrow');
+      }, 100*index);
+    }
+  });
+});

@@ -33,6 +33,7 @@
 
   /* animation */
   --animation-duration: .3s;
+  --animation-duration-extend: 5s;
 }
 
 /* Universal tags */
@@ -511,7 +512,8 @@ p {
   transform: translateX(545px);
 }
 
-.animate, .feature img, .feature h4 {
+.animate, .feature img, .feature h4,
+.stripe.stripeGrow {
   transition: all 3s ease-in-out;
   animation: 2s forwards fadeIn;
 }
@@ -567,6 +569,11 @@ p {
 
 .stripe {
   width: 10%;
+  height: 0;
+}
+
+.stripe.stripeGrow {
+  height: 520px;
 }
 
 #s1 {
@@ -612,26 +619,33 @@ p {
 #location .section__container {
   display: flex;
   position: absolute;
-  top: 0; left: 0;
-  margin: 0 auto;
+  top: 50%; 
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
 }
 
 .location {
   flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
-.map {
-  z-index: 1;
+@keyframes rotation {
+  from {rotate: 0;}
+  to {rotate: 360deg;}
 }
-
-.map, .radar {
+.location-radar {
   position: absolute;
+  animation: rotation var(--animation-duration-extend) infinite linear;
 }
 
 .explanation {
   flex-basis: 50%;
   color: var(--color-white);
+  padding: 0 50px;
 }
 
 /* contact */
@@ -687,12 +701,10 @@ p {
     padding: 16px;
   }
 
+  /* Navbar */
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    /* right: 0;
-    left: 0;
-    width: 375.2px; */
   }
 
   .navbar__logo {
@@ -715,11 +727,13 @@ p {
     color: var(--color-white);
   }
 
+  /* Home */
   .home__avatar {
     width: 150px;
     height: 150px;
   }
 
+  /* About */
   .about__majors {
     flex-direction: column;
     margin: 40px 0 20px;
@@ -733,14 +747,15 @@ p {
     margin-bottom: 20px;
   }
 
+  /* Skills */
   .skillset {
     flex-direction: column;
     margin-bottom: 40px;
   }
 
+  /* MyWork */
   .work__categories {
     flex-direction: column;
-    /* text-align: center; */
     padding: 0 40px;
   }
   
@@ -758,6 +773,7 @@ p {
     flex-grow: 1;
   }
 
+  /* Testimonials */
   .testimonial {
     flex-direction: column;
   }
@@ -778,5 +794,10 @@ p {
   }
   .testimonial__avatar:nth-child(even) {
     margin: 0 0 10px;
+  }
+  /* Device */
+  .device__container {
+    display: flex;
+    flex-direction: column;
   }
 }
