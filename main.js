@@ -103,38 +103,53 @@ setTimeout(() => {
   // let project;
   // for(let i = 0; i < projects.length; i++) {
   //   console.log(projects[i]);
-
   // };
 
-// Device
-document.addEventListener('scroll', () => {
-  const monitor = document.querySelector('#monitor');
-  console.log(window.scrollY);
-  if(window.scrollY > 3800) {
-    monitor.classList.add('animate');
-  } else {
-    monitor.classList.remove('animate');
-  }
+  // Device animation
+  const device__container = document.querySelector('#device');
+  const deviceTop = device__container.offsetTop;
+  const offset = 600;
+  const deviceOST = deviceTop - offset;
   
-  const phone = document.querySelector('#phone');
-  console.log(window.scrollY);
-  if(window.scrollY > 3800) {
-    phone.classList.add('animate');
-  } else {
-    phone.classList.remove('animate');
-  }
-});
+  console.log(`deviceOST: ${deviceOST}`);
 
-// Features
-const featureContainer = document.querySelectorAll('.feature');
-
-featureContainer.forEach((feature) => {
-  // console.log(feature);
   document.addEventListener('scroll', () => {
-    if(window.scrollY > 4110) {
-      feature.classList.add('animate');
-    } else {
-      feature.classList.remove('animate');
-    }
+    const active = document.querySelectorAll('.device__item');
+    active.forEach((device__item) => {
+      if(window.scrollY > deviceOST) {
+        device__item.classList.add('animate');
+      } 
+      // else {
+      //   device__item.classList.remove('animate');
+      // };
+    })
   });
+
+// Features animation
+const features__container = document.querySelector('#features');
+const featuresTop = features__container.offsetTop;
+const featuresOST = featuresTop - offset;
+console.log(`featuresTop: ${featuresTop}`);
+
+
+function imgGrow(target) {
+  const features = document.querySelectorAll(target);
+  features.forEach((target) => {
+    // console.log(window.scrollY);
+    if(window.scrollY > featuresOST) {
+      target.classList.add('img__grow');
+    } 
+    // else {
+    //   target.classList.remove('img__grow');
+    // }
+  });
+};
+
+document.addEventListener('scroll', () => {
+  imgGrow('.imgAction');
 });
+
+document.addEventListener('scroll', () => {
+  imgGrow('.feature__name')
+})
+
