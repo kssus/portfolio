@@ -28,11 +28,14 @@ navbarMenu.addEventListener('click', (e) => {
 const home = document.querySelector('#home');
 const homeContainer = document.querySelector('#home .section__container');
 const homeHeight = home.getBoundingClientRect().height;
+console.log(homeHeight);
 // console.log(homeHeight);
 document.addEventListener('scroll', () => {
 
   homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
+
 
 // arrow up to home
 const arrowUp = document.querySelector('.arrow-up');
@@ -160,7 +163,7 @@ const stripesOST = stripesTop - offset;
 document.addEventListener('scroll', () => {
   const stripes = document.querySelectorAll('.stripe');
   stripes.forEach((stripe, index) => {
-    // console.log(index);
+    // console.log(stripes);
     if(window.scrollY > stripesOST) {
       setTimeout(() => {
         stripe.classList.add('stripeGrow');

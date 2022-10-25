@@ -153,19 +153,41 @@ p {
 
 /* home */
 #home {
-  background: url(img/cover.png) center/cover no-repeat;
+  /* background: url(img/cover.png) center/cover no-repeat; */
+  position: relative;
   color: var(--color-white);
+  padding: 0;
 }
 
+.slideImgs {
+  display: flex;
+  /* z-index/: 0; */
+}
+
+
 #home .section__container {
+  position: absolute;
+  top: 22%;
+  left: 0;
+  right: 0;
+  width: 100%;
   opacity: 1;
+}
+
+.home__content {
+  width: 70%;
+  background-color: rgba(192, 104, 146, .7);
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
 .home__avatar {
   border-radius: 50%;
-  margin-top: 140px;
+  /* margin-top: 140px; */
+  margin-top: 20px;
   width: 300px;
   height: 300px;
+  z-index: 1;
 }
 
 .home__contact {
@@ -175,6 +197,7 @@ p {
   margin-top: 30px;
   border-radius: var(--border-radius-size);
   border: 2px solid var(--color-white);
+  margin-bottom: 20px;
   color: var(--color-white);
 }
 
@@ -531,7 +554,7 @@ p {
 
 .features {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .feature img {
@@ -554,6 +577,7 @@ p {
 .feature h4.img__grow {
   font-size: var(--font-medium);
   font-weight: var(--weight-regular);
+  text-transform: uppercase;
 }
 
 /* Location */
