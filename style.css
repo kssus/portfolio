@@ -46,6 +46,7 @@
 body {
   font-family:'open sans', sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -155,34 +156,30 @@ p {
 #home {
   /* background: url(img/cover.png) center/cover no-repeat; */
   position: relative;
-  color: var(--color-white);
-  padding: 0;
-}
-
-.slideImgs {
-  display: flex;
-  /* z-index/: 0; */
 }
 
 
 #home .section__container {
   position: absolute;
-  top: 22%;
+  top: 0;
   left: 0;
   right: 0;
+  margin-top: 170px;
+  /* padding-bottom: -50px; */
   width: 100%;
+  height: 100%;
   opacity: 1;
 }
 
 .home__content {
   width: 70%;
-  background-color: rgba(192, 104, 146, .7);
+  background-color: rgba(192, 104, 146, 1);
   border-radius: 50%;
   margin: 0 auto;
 }
 
 .home__avatar {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   /* margin-top: 140px; */
   margin-top: 20px;
   width: 300px;
@@ -199,7 +196,163 @@ p {
   border: 2px solid var(--color-white);
   margin-bottom: 20px;
   color: var(--color-white);
+  transition: all var(--animation-duration) ease-in;
 }
+
+.home__contact:hover {
+  background-color: var(--color-blue);
+}
+
+.slider {
+  display: flex;
+  position: relative;
+}
+
+.slide {
+  transition: all  var(--animation-duration) ease-out;
+}
+
+.slideItem {
+  /* layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* position - 버튼 클릭시 left offset값을 적용시키기 위해 */
+  position: relative;
+  left: 0px;
+
+  /* size */
+  width: 100%;
+  height: 100%;
+  /* flex item의 flex-shrink는 기본값이 1이므로 컨테이너 크기에 맞게 줄어드는데, 슬라이드를 구현할 것이므로 줄어들지 않도록 0을 준다. */
+  flex-shrink: 0;
+
+  /* transition */
+  transition: left 0.15s;
+}
+
+/* .slideItem img {
+  object-fit: cover;
+} */
+
+/* 각 슬라이드가 변경되는 것을 시각적으로 확인하기 쉽도록 각 슬라이드별 색상 적용 */
+.slideItem.item1 {
+  background-color: darkgoldenrod;
+}
+.slideItem.item2 {
+  background-color: aqua;
+}
+.slideItem.item3 {
+  background-color: blueviolet;
+}
+.slideItem.item4 {
+  background-color: burlywood;
+}
+
+.slide__Btn {
+  position: absolute;
+  top: 35%;
+  background-color: rgba(192, 104, 146, .1);
+  border-radius: 50%;
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, .5);
+  z-index: 1;
+}
+
+.slide__Btn.nextBtn {
+  right: 20px;
+}
+
+.slide__Btn.prevBtn {
+  left: 20px;
+}
+
+/* .slider input, */
+.slideRadio input[type="radio"] {
+  display: none;
+}
+
+.slide__pagination {
+  display: flex;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-white);
+}
+
+.slide__pagination li {
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+  padding: 16px;
+  opacity: 0.3;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.slide__pagination li:before,
+.slide__pagination li:after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slide__pagination li:before {
+  width: 8px;
+  height: 8px;
+  background: var(--color-white);
+}
+
+.slide__pagination li:after {
+  width: 17px;
+  height: 17px;
+  border: 1px solid var(--color-white);
+}
+
+.slide__pagination li.active { 
+  opacity: .7;
+}
+
+/* #slideRadio__1:active ~ .slide__pagination li:nth-child(1),
+#slideRadio__2:active ~ .slide__pagination li:nth-child(2),
+#slideRadio__3:active ~ .slide__pagination li:nth-child(3),
+#slideRadio__4:active ~ .slide__pagination li:nth-child(4) {
+  opacity: .8;
+}
+
+#slideRadio__1:active ~ .slide__pagination li:nth-child(1):after,
+#slideRadio__2:active ~ .slide__pagination li:nth-child(2):after,
+#slideRadio__3:active ~ .slide__pagination li:nth-child(3):after,
+#slideRadio__4:active ~ .slide__pagination li:nth-child(4):after {
+  opacity: 1;
+} */
+
+/* #slideRadio__1:checked ~ .slide {
+  transform: translateX(0);
+}
+
+#slideRadio__2:checked ~ .slide {
+  transform: translateX(-100%);
+}
+
+#slideRadio__3:checked ~ .slide {
+  transform: translateX(200%);
+}
+
+#slideRadio__4:checked ~ .slide {
+  transform: translateX(300%);
+}
+
+.slide.moveLeft {
+  transform: translateX(-1920px);
+} */
 
 /* section common */
 .section {
