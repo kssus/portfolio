@@ -28,10 +28,10 @@ navbarMenu.addEventListener('click', (e) => {
 const home = document.querySelector('#home');
 const homeContainer = document.querySelector('#home .section__container');
 const homeHeight = home.getBoundingClientRect().height;
-// console.log(homeHeight);
+console.log(`homeHeight: ${homeHeight}`);
 document.addEventListener('scroll', () => {
-
   homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
+  console.log(window.scrollY)
 });
 
 // Slider setting
@@ -75,7 +75,7 @@ const paginationItems = document.querySelectorAll('.slide__pagination li');
   let offsetSlide = slideWidth * currSlide;
   slideItems.forEach((item) => {
   item.setAttribute('style', `left: ${[-offsetSlide]}px`);
-  console.log(startElem);
+  // console.log(startElem);
 });
 
 // const startSlide = slideItems[0];
