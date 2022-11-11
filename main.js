@@ -154,7 +154,7 @@ function nextMove() {
 
 setInterval(() => {
   nextMove();
-}, 5000);
+}, 7000);
 
 // Move slide
 
