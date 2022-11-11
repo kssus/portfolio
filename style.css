@@ -371,7 +371,7 @@ p {
 }
 
 .pop_close a,
-.pop_close .lnr-cross {
+.pop_close .fa-circle-xmark {
   color: var(--color-black);
   background-color: var(--color-orange);
   margin-right: 10px;
