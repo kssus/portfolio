@@ -154,7 +154,7 @@ function nextMove() {
 
 setInterval(() => {
   nextMove();
-}, 5000);
+}, 7000);
 
 // Move slide
 
@@ -262,35 +262,66 @@ setTimeout(() => {
   //   console.log(projects[i]);
   // };
 
-// Device
+  // Device animation
+  const device__container = document.querySelector('#device');
+  const deviceTop = device__container.offsetTop;
+  const offset = 600;
+  const deviceOST = deviceTop - offset;  
+  // console.log(`deviceOST: ${deviceOST}`);
+
+  document.addEventListener('scroll', () => {
+    const active = document.querySelectorAll('.device__item');
+    active.forEach((device__item) => {
+      if(window.scrollY > deviceOST) {
+        device__item.classList.add('animate');
+      } 
+      // else {
+      //   device__item.classList.remove('animate');
+      // };
+    });
+  });
+
+// Features animation
+const features__container = document.querySelector('#features');
+const featuresTop = features__container.offsetTop;
+const featuresOST = featuresTop - offset;
+// console.log(`featuresTop: ${featuresTop}`);
+
+
+function imgGrow(target) {
+  const features = document.querySelectorAll(target);
+  features.forEach((target) => {
+    // console.log(window.scrollY);
+    if(window.scrollY > featuresOST) {
+      target.classList.add('img__grow');
+    } 
+    // else {
+    //   target.classList.remove('img__grow');
+    // }
+  });
+};
+
 document.addEventListener('scroll', () => {
-  const monitor = document.querySelector('#monitor');
-  console.log(window.scrollY);
-  if(window.scrollY > 3800) {
-    monitor.classList.add('animate');
-  } else {
-    monitor.classList.remove('animate');
-  }
-  
-  const phone = document.querySelector('#phone');
-  console.log(window.scrollY);
-  if(window.scrollY > 3800) {
-    phone.classList.add('animate');
-  } else {
-    phone.classList.remove('animate');
-  }
+  imgGrow('.imgAction');
 });
 
-// Features
-const featureContainer = document.querySelectorAll('.feature');
+document.addEventListener('scroll', () => {
+  imgGrow('.feature__name')
+});
 
-featureContainer.forEach((feature) => {
-  // console.log(feature);
-  document.addEventListener('scroll', () => {
-    if(window.scrollY > 4110) {
-      feature.classList.add('animate');
-    } else {
-      feature.classList.remove('animate');
+// Location
+const stripes__container = document.querySelector('#location');
+const stripesTop = stripes__container.offsetTop;
+const stripesOST = stripesTop - offset;
+  // console.log(`stripesTop: ${stripesTop}`);
+document.addEventListener('scroll', () => {
+  const stripes = document.querySelectorAll('.stripe');
+  stripes.forEach((stripe, index) => {
+    // console.log(stripes);
+    if(window.scrollY > stripesOST) {
+      setTimeout(() => {
+        stripe.classList.add('stripeGrow');
+      }, 100*index);
     }
   });
 });

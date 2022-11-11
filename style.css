@@ -256,7 +256,7 @@ p {
 
 .slide__Btn {
   position: absolute;
-  top: 35%;
+  top: 50%;
   background-color: rgba(192, 104, 146, .1);
   border-radius: 50%;
   font-size: 1.5em;
@@ -691,9 +691,49 @@ p {
   transform: translateX(545px);
 }
 
-.animate {
+.animate, .feature img, .feature h4,
+.stripe.stripeGrow {
   transition: all 3s ease-in-out;
   animation: 2s forwards fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  5% {opacity: 1;}
+  100% {opacity: 1;}
+}
+
+/* Features */
+#features {
+  background-color: var(--color-light-grey);
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature img {
+  /* transform: scale(0%); */
+  height: 0;
+  width: 0;
+}
+
+.feature img.img__grow {
+  height: 169px;
+  width: 169px;
+}
+
+.feature h4 {
+ font-size: 0;
+ font-weight: 0;
+ margin: 10px 0;
+}
+
+.feature h4.img__grow {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
 }
 
 /* Location */
@@ -759,21 +799,27 @@ p {
 #location .section__container {
   display: flex;
   position: absolute;
-  top: 0; left: 0;
-  margin: 0 auto;
+  top: 50%; 
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
 }
 
 .location {
   flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
-.map {
-  z-index: 1;
+@keyframes rotation {
+  from {rotate: 0;}
+  to {rotate: 360deg;}
 }
-
-.map, .radar {
+.location-radar {
   position: absolute;
+  animation: rotation var(--animation-duration-extend) infinite linear;
 }
 
 .explanation {
