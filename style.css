@@ -357,6 +357,26 @@ p {
   transform: translateX(-1920px);
 } */
 
+/* Banner */
+.popContainer {
+  display: flex;
+  position: absolute;
+  top: 25%;
+  left: 170px;
+}
+.pop {
+  width: 300px;
+  height: 480px;
+  background-color: var(--color-light-grey);
+}
+
+.pop_close a,
+.pop_close .lnr-cross {
+  color: var(--color-black);
+  background-color: var(--color-orange);
+  margin-right: 10px;
+}
+
 /* section common */
 .section {
   padding: 50px;
